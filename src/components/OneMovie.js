@@ -57,8 +57,8 @@ export default class OneMovie extends Component {
               </span>
             ))}
           </div>
-            <div className="clearfix"></div>
-            <hr />
+          <div className="clearfix"></div>
+          <hr />
 
           <table className="table table-compact table-striped">
             <thead></thead>
