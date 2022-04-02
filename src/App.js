@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Admin from "./components/Admin";
 import Home from "./components/Home";
 import Movies from "./components/Movies";
@@ -32,7 +32,7 @@ export default function App() {
                   <Link to="/genres">Genres</Link>
                 </li>
                 <li className="list-group-item">
-                  <Link to="/admin/add">Add Movie</Link>
+                  <Link to="/admin/movie/0">Add Movie</Link>
                 </li>
                 <li className="list-group-item">
                   <Link to="/admin">Manage Catalogue</Link>
@@ -50,7 +50,8 @@ export default function App() {
               <Route exact path="/genres">
                 <Genres />
               </Route>
-              <Route path="/admin/add" component={EditMovie} />
+              <Route path="/admin/movie/:id" component={EditMovie} />
+
               <Route path="/admin" component={Admin}>
                 <Admin />
               </Route>
